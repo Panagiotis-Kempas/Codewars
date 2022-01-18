@@ -1,0 +1,22 @@
+You are given a string containing zeros or positive digits and letters ONLY. String will never be empty.
+Your task is to return a string with each digit raised to power of 2, without touching the letters.
+Example Input: "a2b4c" Result: "a4b16c"
+Example Input: "123" Result: "149"
+Example Input: "abcd" Result: "abcd"
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Numerics;
+
+namespace Solution {
+  public class Kata
+  {
+    public static string RaiseStringNumbers(string str)
+    {
+      return string.Concat(str.Select(x => char.IsNumber(x) ? Math.Pow((int)x -48 , 2).ToString() : x.ToString()));
+    }
+  }
+}

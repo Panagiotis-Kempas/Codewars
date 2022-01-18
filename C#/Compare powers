@@ -1,0 +1,33 @@
+Task:
+Your job is to write a function, which takes three integers a, b, and c as arguments, and returns True if exactly two of of the three integers are positive numbers (greater than zero), and False - otherwise.
+
+Examples:
+TwoArePositive(2, 4, -3) == true
+TwoArePositive(-4, 6, 8) == true
+TwoArePositive(4, -6, 9) == true
+TwoArePositive(-4, 6, 0) == false
+TwoArePositive(4, 6, 10) == false
+TwoArePositive(-14, -3, -4) == false
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+class Kata
+{
+    public static int ComparePowers(int[] a, int[] b)
+    {
+        var c = Math.Pow(a[0],a[1]);
+      var d = Math.Pow(b[0],b[1]);
+      if(c > d){
+        return -1;
+      }
+      else if(c.Equals( d)){
+        return 0;
+      }
+      return 1;
+    }
+}

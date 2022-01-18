@@ -1,0 +1,33 @@
+Description:
+Move all exclamation marks to the end of the sentence
+
+Examples
+remove("Hi!") === "Hi!"
+remove("Hi! Hi!") === "Hi Hi!!"
+remove("Hi! Hi! Hi!") === "Hi Hi Hi!!!"
+remove("Hi! !Hi Hi!") === "Hi Hi Hi!!!"
+remove("Hi! Hi!! Hi!") === "Hi Hi Hi!!!!"
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public static class Kata
+{
+    public static string Remove(string s)
+    {
+        var b = string.Concat(s.Select(x => x == '!' ? "" : x.ToString()));
+            int count = 0;
+            foreach (var item in s)
+            {
+                if(item == '!')
+                {
+                    count++;
+                }
+            }
+      return b + new string('!',count);
+      
+    }
+}
