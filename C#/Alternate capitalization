@@ -1,0 +1,32 @@
+Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+The input will be a lowercase string with no spaces.
+
+Good luck!
+
+If you like this Kata, please try:
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public static class Kata
+{
+  public static string[] Capitalize(string s)
+  {
+    string[] b = new string[2];
+            var c = string.Concat(s.Select((x, i) => i % 2 == 0 ? x.ToString().ToUpper() : x.ToString()));
+            var d = string.Concat(s.Select((x, i) => i % 2 != 0 ? x.ToString().ToUpper() : x.ToString()));
+            b[0] = c;
+            b[1] = d;
+    return b;
+    
+  }
+}
