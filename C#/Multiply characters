@@ -1,0 +1,29 @@
+Here we have a function that help us spam our hearty laughter. But is not working! I need you to find out why...
+
+Expected results:
+
+Kata.Spam(1)  => "hue";
+Kata.Spam(6)  => "huehuehuehuehuehue";
+Kata.Spam(14) => "huehuehuehuehuehuehuehuehuehuehuehuehuehue";
+
+
+
+
+using System;
+using System.Collections.Generic;
+using Microsoft.VisualBasic;
+
+public class Kata
+{
+  public static string Spam(int n)
+  {
+     List<string> name = new List<string>();
+            for (int i = 0; i < n; i++)
+            {
+                name.Add("hue");
+            }
+
+            var b = string.Concat(name);
+    return b;
+  }
+}
