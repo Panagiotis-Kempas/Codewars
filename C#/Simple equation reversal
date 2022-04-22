@@ -1,0 +1,25 @@
+Given a mathematical equation that has *,+,-,/, reverse it as follows:
+
+solve("100*b/y") = "y/b*100"
+solve("a+b-c/d*30") = "30*d/c-b+a"
+More examples in test cases.
+
+Good luck!
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Solution
+{    
+    public static string solve(string eq){
+      
+            var b = string.Concat( eq.Select(x => char.IsDigit(x) ? x.ToString() : "," + x.ToString() + ",").ToArray());
+            var c = b.Split(',').ToArray();
+            var d = string.Concat(c.Reverse());
+      return d;
+        
+    }
+}
